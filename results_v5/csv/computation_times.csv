@@ -1,0 +1,9 @@
+Model,Train (s),Predict (s)
+XGBoost,7.69,1.0515
+LightGBM,11.63,1.0668
+TCN,60.39,0.0287
+Transformer,110.41,0.0317
+LSTM_Attn,121.72,0.0306
+GradBoost,125.0,0.7381
+PINN,127.76,0.0407
+HYBRID,171.77,0.0282

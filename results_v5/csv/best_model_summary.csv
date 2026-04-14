@@ -1,0 +1,9 @@
+Model,Eval Mode,Best Split,n_early,Features,R²,MAE,RMSE,MAPE (%),Cell R²,Train (s),Predict (s)
+GradBoost,combined,ISU_only,3,top5,0.9269,0.0246,0.0393,3.54,0.8903,125.0,0.7381
+HYBRID,combined,combined_80_20,10,all,0.9491,0.0211,0.0319,3.06,0.9170,171.77,0.0282
+LSTM_Attn,combined,ISU_only,50,all,0.9632,0.0195,0.0286,2.83,-0.3287,121.72,0.0306
+LightGBM,combined,ISU_only,10,top5,0.9212,0.0258,0.0406,3.69,0.8772,11.63,1.0668
+PINN,combined,ISU_only,10,all,0.8815,0.0384,0.0519,5.57,0.7537,127.76,0.0407
+TCN,combined,ISU_only,10,all,0.7761,0.0559,0.0713,8.06,0.6162,60.39,0.0287
+Transformer,combined,combined_80_20,30,all,0.9118,0.0295,0.0418,4.29,0.8677,110.41,0.0317
+XGBoost,combined,ISU_only,50,top10,0.9063,0.0275,0.0441,3.97,0.4586,7.69,1.0515

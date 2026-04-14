@@ -11,7 +11,7 @@ This repository contains two main scripts:
 | Script | Description |
 |---|---|
 | `data_extraction_v4.py` | Extracts and unifies raw cycling data from **ISU-ILCC** and **UofM** datasets into a single CSV |
-| `soh_trajectory_prediction_v4.py` | Trains and evaluates **8 models** to predict full SoH trajectories from early-cycle observations |
+| `soh_trajectory_prediction_v5.py` | Trains and evaluates **8 models** to predict full SoH trajectories from early-cycle observations |
 
 **Datasets used:**
 - **ISU-ILCC** — 251 NMC/graphite polymer cells (250 mAh), 63 cycling conditions, varying charge rate, discharge rate, and depth of discharge (DoD)
@@ -70,15 +70,16 @@ UofM/
 ```
 .
 ├── data_extraction_v4.py           # Step 1: Extract & unify raw data → CSV
-├── soh_trajectory_prediction_v4.py # Step 2: Train & evaluate all models
+├── soh_trajectory_prediction_v5.py # Step 2: Train & evaluate all models
 ├── ISU/                            # ISU-ILCC dataset (see download above)
 ├── UofM/                           # UofM dataset (see download above)
 ├── dataset_v2.csv                  # Output of Step 1 (generated)
-└── results_v2/                     # Output of Step 2 (generated)
+└── results_v5/                     # Output of Step 2 (generated)
     ├── csv/
     │   ├── all_experiment_results.csv
     │   ├── per_cell_metrics.csv
     │   └── best_model_summary.csv
+    ├── pickles/
     ├── plots/
     └── models/
 ```
@@ -211,7 +212,7 @@ All splits are **group-aware** — every cycle from a given cell is entirely in 
 After running Step 2, the `results_v2/` directory contains:
 
 ```
-results_v2/
+results_v5/
 ├── csv/
 │   ├── all_experiment_results.csv  # Full results for every model × split × n_early × feature_set
 │   ├── per_cell_metrics.csv        # Per-cell R², MAE, RMSE for every experiment
